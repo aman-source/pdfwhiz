@@ -1,0 +1,5 @@
+streamlit
+PyPDF2
+openai==0.28
+transformers
+torch
