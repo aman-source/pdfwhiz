@@ -1,5 +1,11 @@
-streamlit
-PyPDF2
-openai==0.28
-transformers
-torch
+docx==0.2.4
+langchain==0.3.17
+langchain_community==0.3.16
+openai==1.61.1
+Pillow==11.1.0
+PyPDF2==3.0.1
+pytesseract==0.3.13
+python_docx==1.1.2
+streamlit==1.37.1
+torch==2.4.1+cu118
+transformers==4.45.2
