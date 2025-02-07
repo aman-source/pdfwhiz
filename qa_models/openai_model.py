@@ -7,7 +7,7 @@ import os
 class OpenAIModel(QAModel):
     """QA Model using OpenAI's GPT API."""
 
-    def __init__(self, api_key='', model_name='gpt-3.5-turbo'):
+    def __init__(self, api_key=None, model_name='gpt-3.5-turbo'):
         """
         Initialize the OpenAI model.
 
@@ -15,7 +15,7 @@ class OpenAIModel(QAModel):
             api_key (str, optional): OpenAI API key. Defaults to environment variable.
             model_name (str): The OpenAI model to use.
         """
-        self.api_key = api_key or os.getenv('OPENAI_API_KEY')
+        self.api_key =  os.getenv('OPENAI_API_KEY')
         if not self.api_key:
             raise ValueError("OpenAI API key is not set.")
         

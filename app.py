@@ -8,6 +8,7 @@ from qa_models.openai_model import OpenAIModel
 from qa_models.transformer_model import TransformerModel
 from doc_processor import DocProcessor
 import time
+import os
 
 # Initialize processors
 pdf_processor = PDFProcessor()
@@ -23,8 +24,9 @@ if "memory" not in st.session_state:
     st.session_state.memory = ConversationBufferMemory()
 
 # Initialize LangChain ConversationChain for OpenAI model
+api_key = os.getenv('OPENAI_API_KEY')
 conversation_chain = ConversationChain(
-    llm=ChatOpenAI(model="gpt-3.5-turbo", openai_api_key="", temperature=0.2),
+    llm=ChatOpenAI(model="gpt-3.5-turbo", openai_api_key= api_key, temperature=0.2),
     memory=st.session_state.memory
 )
 
