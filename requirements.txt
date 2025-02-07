@@ -8,3 +8,4 @@ pytesseract
 python_docx
 streamlit
 transformers
+torch
